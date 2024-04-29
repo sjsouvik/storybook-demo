@@ -6,19 +6,8 @@ import {
 } from "./AccordionProvider";
 import { ChildProp, AccordionItemType } from "./types";
 
-export const Accordion = () => {
-  return (
-    <AccordionProvider>
-      <AccordionItem id="1">
-        <AccordionHeader>Accordion header</AccordionHeader>
-        <AccordionBody>Accordion body</AccordionBody>
-      </AccordionItem>
-      <AccordionItem id="2">
-        <AccordionHeader>Accordion header 2</AccordionHeader>
-        <AccordionBody>Accordion body 2</AccordionBody>
-      </AccordionItem>
-    </AccordionProvider>
-  );
+export const Accordion = ({ children }: ChildProp) => {
+  return <AccordionProvider>{children}</AccordionProvider>;
 };
 
 export const AccordionHeader = ({ children, ...props }: ChildProp) => {
